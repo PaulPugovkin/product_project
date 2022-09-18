@@ -1,6 +1,4 @@
 import {Route, Routes} from "react-router-dom";
-import {AboutPageAsync} from "pages/AboutPage";
-import {MainPageAsync} from "pages/MainPage";
 import {Suspense} from "react";
 import {routeConfig} from "shared/config/routeConfig/routeConfig";
 
