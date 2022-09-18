@@ -2,6 +2,7 @@ import path from 'path'
 import webpack from 'webpack'
 import {buildWebpackConfig} from './config/build/buildWebpackConfig'
 import {BuildEnv, BuildPaths} from './config/build/types/config'
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 
 export default (env: BuildEnv) => {
@@ -23,6 +24,11 @@ export default (env: BuildEnv) => {
         isDev,
         port
     })
+
+    if (isDev) {
+        config.plugins.push(new ReactRefreshWebpackPlugin())
+        config.plugins.push(new webpack.HotModuleReplacementPlugin())
+    }
 
     return config
 }
