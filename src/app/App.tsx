@@ -5,6 +5,7 @@ import {classNames} from "shared/lib/classNames/classNames";
 import {useTheme} from "app/providers/ThemeProvider";
 import {AboutPageAsync} from "pages/AboutPage";
 import {MainPageAsync} from "pages/MainPage";
+import {AppRouter} from "app/providers/router";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme()
@@ -16,13 +17,7 @@ export const App = () => {
             </button>
             <Link to='/'>Main page</Link>
             <Link to='/about'>About page</Link>
-
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path='about' element={<AboutPageAsync/>}/>
-                    <Route path='/' element={<MainPageAsync/>}/>
-                </Routes>
-            </Suspense>
+            <AppRouter/>
         </div>
     )
 }
