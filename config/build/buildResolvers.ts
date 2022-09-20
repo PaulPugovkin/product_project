@@ -1,4 +1,4 @@
-import {BuildOptions} from "./types/config";
+import { BuildOptions } from './types/config';
 
 export function buildResolvers(options: BuildOptions) {
     return {
@@ -6,6 +6,6 @@ export function buildResolvers(options: BuildOptions) {
         preferAbsolute: true,
         modules: [options.paths.src, 'node_modules'],
         mainFiles: ['index'],
-        alias: {}
-    }
+        alias: {},
+    };
 }
