@@ -6,7 +6,7 @@ interface LoaderProps {
 }
 
 export const Loader = ({ className }: LoaderProps) => (
-    <div className={classNames(cls.Loader, {}, [className])} />
+    <div className={classNames(cls.spinLoader, {}, [className])} />
 );
 
 export default Loader;

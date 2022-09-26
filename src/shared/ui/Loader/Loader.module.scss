@@ -1,11 +1,11 @@
-.Loader {
+.spin-loader {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
 }
 
-.Loader::after {
+.spin-loader::after {
     content: " ";
     display: block;
     border-radius: 50%;
