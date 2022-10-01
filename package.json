@@ -64,6 +64,7 @@
     "jest": "^27.5.1",
     "loki": "^0.30.3",
     "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.17",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
