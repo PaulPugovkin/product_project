@@ -1,6 +1,5 @@
 import path from 'path';
 import webpack from 'webpack';
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { BuildEnv, BuildPaths } from './config/build/types/config';
 
@@ -22,11 +21,6 @@ export default (env: BuildEnv) => {
         isDev,
         port,
     });
-
-    if (isDev) {
-        config.plugins.push(new ReactRefreshWebpackPlugin());
-        config.plugins.push(new webpack.HotModuleReplacementPlugin());
-    }
 
     return config;
 };
