@@ -14,7 +14,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:storybook-static",
     "test:ui:update": "npx loki update --reactUri=\"file:./storybook-static\"",
     "test:report": "npm run test:report:json && npm run test:report:html",
     "test:report:json": "node scripts/generate-visual-json-report.js",
