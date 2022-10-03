@@ -37,9 +37,10 @@ module.exports = {
             ignoreAttribute: ['data-testid', 'to'],
         }],
         'max-len': ['error', {
-            code: 100,
+            code: 120,
             ignoreComments: true,
         }],
+        'linebreak-style': ['error', 'windows'],
     },
     globals: {
         __IS_DEV__: true,
